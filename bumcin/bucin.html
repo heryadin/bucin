@@ -1,63 +1,106 @@
-<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://bucin.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" />
-
+<html>
+<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://hayuk.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" /><!--<script src="https://hayuk.likeadream.repl.co/script.js"></script>-->
 <head>
 <!-- 
-This code was made by Rayya R
+This code was made by Rayya R!
 Blog: https://sinkronin.com
-Instagram: rayyarrr
-TikTok: rayyarr_
+Instagram: @rayyarrr
+TikTok: @rayyarr_
 Telegram: @rayyarr
-Dilarang mengganti hak cipta tanpa izin.
+WhatsApp: 6282130626142
 -->
 </head>
-
 <body>
-<!-- Ganti Background --><style>body{
-background-image:url("https://i.postimg.cc/prWghSG3/IMG-20211207-133316-715.jpg");}</style>
+<style>
+body{background-image: url("https://i.postimg.cc/y8BytZ0S/IMG-20211126-195649-698.jpg");background-repeat: no-repeat;background-size: 105% 105%;animation:none;transition:all .3s ease;}
+</style>
 
-<div id='Content'><div id="fotgoy" class="foto"><div class="image">
-<!-- Foto Atas --><img src="https://i.postimg.cc/x1pT0vC0/ngeng.gif" width="110px" height="110px"/></div></div>
+<div id="konten">
 
-<div id='pergeseran'>
-<p><i>Geser &#128073;</i></p>
-<p>Halo manis &#127773;</p>
-<p>Aku pengen bilang sesuatu nih</p>
-<p>Sebenernya...</p>
-<p>Aku mau kita balikan &#129402;</p>
-<p>Aku masih mencintaimu <3</p>
-<p>Kamu mau kan? &#129402;</p>
-<p>Jujur ya &#128073; <a id="tm" onClick='pmau();'>[ Mauu ]</a><a id="tm" onClick='pgak();'>[ Gamau ]</a></p>
+<div id="fotoloveu"><div class="image">
+<img id="animasi" src="https://i.postimg.cc/28MgpQHY/hati.png" width="150px" height="150px"/></div><span id="sp2"></span><span id="sp3"></span></div>
+<div id="ftawal"><div class="image">
+<img src="https://i.postimg.cc/Dynvbp74/santuyy.gif" width="160px" height="160px"/></div></div>
+
+<div id='subkonten'>
+<p class='catatan sek'>
+<marquee id="marq" scrollamount="15">
+Kamu mau gak jadi pacar aku? <i id="spasi"></i>
+Kalo enggak aku aja deh yang jadi pacar kamu <i id="spasi"></i>
+Hayukkk<i id="spasi"></i>
+&#128526;&#128526;&#128526;<i id="spasi"></i>
+Klik tombol di bawah dong &#128526;&#128071;</marquee>
+</p>
+
+<div id="tombKlik"><a class='button' onClick='expl();'>
+<!--Emoji LOVE-->&#10084;</a></div>
 </div>
+
+<div id="tombWA"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>
+Kirim</a></div>
+
+<marquee id="imglewat" direction="right"><img src="https://i.postimg.cc/KjgMkqbH/d186d40026c605b289fa1b062d112df4.gif" width="100px" height="100px"/></marquee>
 </div>
 
-<script>
-//Audio Link MP3
-function play() {var audio = new 
-Audio('https://alo.likeadream.repl.co/untuknya.mp3');audio.play();audio.loop=true;audio.addEventListener('ended', function() {this.currentTime = 0;this.play();}, false);} const swals = Swal.mixin({cancelButtonColor: '#909090', confirmButtonColor: '#8B00B4', allowOutsideClick: false,});
+<script> 
+//Teks klik love
+var a=0,finish;
+finish = "I Love You";
+//Teks klik love
+var i=0,finish2;
+finish2 = "Maaf alay :v";  
+function play() {
+//Link Audio Bisa Diganti
+  var audio = new Audio('https://hayuk.likeadream.repl.co/hayuk.mp3');audio.play();
+  audio.loop=true;audio.addEventListener('ended', function() {this.currentTime = 0;this.play();}, false);
+}         
 
-//Reaksi
-async function pmau(){
-await swals.fire({
-  title: 'Yeaaayy ><',
-  text: 'I Love Youuuuu <3',
-  imageUrl: 'https://i.postimg.cc/66C3d4H0/panda-gemoi.gif',
-  imageWidth: 150,
-  imageHeight: 150,
-});
-await swals.fire('Kirim pesan ke no WhatsApp aku ya!!!');
-window.location = 
-"https://api.whatsapp.com/send?phone=&text=Aku udah liat semuanya nih" + "%0A%0A" + "Aku mau ko ><";}
-
-async function pgak(){
-await swals.fire('Yahhh :(');
-await swals.fire('Yaudah deh <3');}
+//Pesan WhatsApp
+ function bukaWa(){window.location = "https://api.whatsapp.com/send?phone=+0&text=Aku udah liat semuanya, lucu banget :v" + "%0A%0A" + "- " + dateTime;} 
 </script>
-
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                await swals.fire('Halo ツ');
+                setTimeout(showDiv, 1300);setTimeout(showKlik, 11000);play();
+            }            
+            mulai();
+</script>
 <script>
-  async function start() {await swals.fire('Halo ツ');setTimeout(mulai, 900);play();} start();
-  function showDiv() {document.getElementById("fotgoy").style.animation = "fotogoy 2s ease infinite";document.getElementById('Content').style.opacity = "1";}  function iloveu() {document.getElementById('sp1').style.display = "none";document.getElementById('sp2').style.display = "block";document.getElementById('text2').style.display = "none";}  function mulai() {ketiknm();showDiv();}  function ketiknm() {document.getElementById('pergeseran').style.opacity = "1";document.getElementById('pergeseran').style.visibility = "visible";document.getElementById('pergeseran').style.margin = "50px 0 0 0";}
+  function showDiv() {StartMarquee();document.getElementById('subkonten').style.opacity = "1"; document.getElementById('konten').style.top = "0";document.getElementById('ftawal').style.opacity = "1";document.getElementById('ftawal').style.height = "160px";document.querySelector("body").style.animation = "fanim 6s ease infinite";}
+  function showKlik() {document.getElementById('tombKlik').style.visibility = "visible";document.getElementById('tombKlik').style.opacity = "1";}
+  function tombol() {document.getElementById('tombWA').style.visibility = "visible";document.getElementById('tombWA').style.opacity = "1";}  
+
+async function duar(){
+var e1 = document.getElementById('animasi');e1.classList.add("degdeg");
+duar2();StartMarqueeL();
+document.getElementById('imglewat').style.display = "block";
+document.body.style.backgroundColor = "#000";
+document.getElementById('ftawal').style.opacity = "0";document.getElementById('ftawal').style.height = "0";
+document.getElementById('fotoloveu').style.opacity = "1";document.getElementById('fotoloveu').style.height = "200px";document.getElementById('fotoloveu').style.margin = "50px 0 0 0";
+document.getElementById('subkonten').style.display = "none";
+}
+function duar2(){
+if(a<finish.length){document.getElementById("sp2").innerHTML += finish.charAt(a);a++;setTimeout(duar2,100);}
+if(a==finish.length){duar3();}
+}
+function duar3(){
+if(i<finish2.length){document.getElementById("sp3").innerHTML += finish2.charAt(i);i++;setTimeout(duar3,200);}
+if(i==finish2.length){setTimeout(tombol,1000);}
+}
+
+async function expl(){setTimeout(duar,200);}
+function StartMarquee(){var marquee = document.getElementById ("marq");marquee.start();}
+function StopMarquee(){var marquee = document.getElementById ("marq");marquee.stop();}
+StopMarquee();
+function StartMarqueeL(){var marquee = document.getElementById ("imglewat");marquee.start();}
+function StopMarqueeL(){var marquee = document.getElementById ("imglewat");marquee.stop();}
+StopMarqueeL();
 </script>
 </body>
 </html>
